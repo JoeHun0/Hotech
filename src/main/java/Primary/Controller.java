@@ -14,8 +14,9 @@ public class Controller {
     public Button Btn2;
     File selectedFile;
     public void onMouseClick(MouseEvent mouseEvent) {
-        Input i = new Input();
-        i.InputFromExcell(selectedFile);
+        Tasks t = new Tasks();
+       // t.InputFromExcell(selectedFile);
+        t.Tuzelo();
     }
 
     public void beOlvas(MouseEvent mouseEvent) {

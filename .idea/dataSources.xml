@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="hotech.db" uuid="9e552fcf-168e-48c2-a92a-57f8b7862ab1">
+    <data-source source="LOCAL" name="hotech.db" uuid="51131d83-f41c-4c89-add0-6f4bf4e8eae8">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Diak\IdeaProjects\Hotech\src\main\resources\hotech.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:E:\forráskódok\saját\Java\SzakdolgozatFX\Hotech\src\main\resources\hotech.db</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>

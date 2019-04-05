@@ -15,40 +15,23 @@ import java.sql.SQLException;
 
 public class Input {
 
-    public void InputFromExcell(File be) {
-        try {
-            XSSFWorkbook workbook = new XSSFWorkbook(new FileInputStream(be));
-            databaseTorol();
-           //  insertThom(workbook);
-        //     insertRhom(workbook);
-        //     insertTuasz1(workbook);
-        //      insertTuag1(workbook);
-       //      insertTuasz2(workbook);
-       //       insertTuag2(workbook);
-       //       insertHatfok(workbook);
-       //       insertGozpar(workbook);
-      //        insertVizpar(workbook);
-      //        insertTuztadat(workbook);
-      //        insertVegyes(workbook);
-      //          insertLogika(workbook);
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (IOException fe) {
-            System.out.println(fe.getMessage());
-        }
-        System.out.println("finish");
-    }
+
     public void databaseTorol(){
-            String sql = "DELETE FROM thom";
+
+
+        String[] tablak = { "gozpar", "hatfok", "logika", "rhom", "sqlite_sequence", "thom", "tua", "tuag1", "tuag2", "tuasz1","tuasz2", "tuztadat" , "vegyes" , "vizpar"};
+            String sql = "DELETE FROM ";
+        for (String tabla  : tablak)
+        {
+            System.out.println(tabla);
             try (Connection conn = this.connect();
-                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
-                 pstmt.executeUpdate();
+                 PreparedStatement pstmt = conn.prepareStatement(sql + tabla)) {
+                pstmt.executeUpdate();
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
-
-
-
+            }
         }
+
     }
 
     public void insertThom(XSSFWorkbook workbook) {
