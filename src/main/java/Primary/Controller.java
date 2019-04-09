@@ -4,6 +4,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
+import eu.hansolo.tilesfx.chart.RadarChart.Mode;
 
 import java.io.File;
 
@@ -15,8 +16,12 @@ public class Controller {
     File selectedFile;
     public void onMouseClick(MouseEvent mouseEvent) {
         Tasks t = new Tasks();
-       // t.InputFromExcell(selectedFile);
+        t.InputFromExcell(selectedFile);
         t.Tuzelo();
+          t.kimenet();
+    }
+    public void tiles(){
+
     }
 
     public void beOlvas(MouseEvent mouseEvent) {
@@ -26,5 +31,4 @@ public class Controller {
         fileKiir.setText(selectedFile.toString());
         Btn1.setVisible(true);
     }
-
 }
